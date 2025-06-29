@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: 'Android';
+    src: url('/ex022_Desafio10/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+
+
+}
+
+
+
+/* ESCALA DE CORES MONOCROMATICA DA PALETA  
+#c5ebd6    TOM DE VERDE MAIS CLARO ATÉ ...                 
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e   TOM DE VERDE MAIS ESCURO
+
+*/
+/*DECLARANDO VARIAVEIS ABAIXO NO ROOT*/
+:root{
+
+    --cor0: #c5ebd6;                 
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
+    --font-android: 'Android', Cursive;
+}
+/* o simbolo '*' retira em GERAL margins e pading SEM resrição  */
+
+*{
+    margin: 0px; /*ESPAÇAMENTO GERAL*/
+    padding: 0px; /*GERAL*/
+}
+
+
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+    a.externo::after {
+
+        content: '\00A0\1F517';
+
+    }
+
+
+header {
+
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5)); /*FUNDO DEGRADE*/
+    min-height: 150px; /*ALTURA MÍNIMA*/
+    text-align: center; /*ALINHAR TEXTO "CURIOSIDADES tudo..."NO CENTRO*/
+    padding: 40px; /*MARGEM ACIMA TITULO CURIOSIDADES*/
+}
+
+
+header > h1{
+    color: white;
+    font-family: var(--font-android);
+    margin-bottom: 20px;
+    font-size: 3em; /*TAMANHO DA FONTE DO TITULO CURIOSIDADE*/
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.274); /*SOMBRA TEXTO*/
+   /* margin-top: 30px; /*MARGEM NO TOPO titulo CURIOSIDADES*/
+}
+
+
+header >p{
+
+    color: white; /*COR DA FONTE BRANCA*/
+    font-family: var(--fonte-padrao); /*FONTE VARIAVEL*/
+    font-size: 1.2em; /*TAMANHO FONTE tudo aquilo...*/
+    max-width: 500px; /*LARGURA DO TEXTO*/
+    margin: auto;
+    margin-bottom: 30px;
+     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.274); /*SOMBRA TEXTO*/
+    /*text-align: center; /*ALINHAR TEXTO AO CENTRO*/
+}
+
+nav{
+    background-color: var(--cor5); /*NAVEGADOR */
+    padding: 10px; /*espacamento*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192); /*SOMBREADO*/
+}
+
+nav >a{
+    color: white; /*TEXTO BRANCO*/
+    padding: 10px; /*ESPAÇAMENTO ENTRE AS LETRAS*/
+    border-radius: 5px; /*AREA QUADRADA ARREDONDAR*/
+    text-decoration: none; /*TIRAR LINHA SUBLINHADA*/
+    font-weight: bold; /*TEXTO EM NEGRITO*/
+    transition-duration: 0.5s; /*EFEITO ESMAECER*/
+}
+
+nav >a:hover{
+
+    background-color: var(--cor3); /*ao passar o MOUSE sobre o TEXTO mude de COR a AREA*/
+    color: var(--cor5); /*COR DA LETRA FICA MAIS ESCURA*/
+}
+
+
+main{
+    min-width: 300px; /*TAMANHO MINIMO DA TELA BRANCA CELULARES e TABLET*/
+    max-width: 1000px; /*TAMANHO MAXIMO PARA PC e NOTEBOOK*/
+    margin: auto; /*CENTRALIZAÇÇÃO AUTOMATICA*/
+    margin-bottom: 30px; /*MARGEM DO RODAPÉ*/
+    padding: 20px; /*MARGIN na tela principalde TITULOS*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*NADA DE SOMBRA No TOPO ou EMBAIXO - EXPALHAMENTO DE 10px BLACK*/
+    background-color: white; /*FOLHA DE FUNDO BRANCA*/
+    /*border-radius: 10px; - ARREDONDAMENTO EM TODAS BORDAS*/
+    border-bottom-left-radius: 10px; /*BORDA EM BAIXO LADO ESQUERDO*/
+    border-bottom-right-radius: 10px; /*BORDA EM BAIXO LADO DIREITO*/
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2{
+
+    font-family: var(--font-android); /*MUDAR A FONTE*/
+    color: var(--cor4); /*MUDAR A COR*/
+    font-size: 1.3em; /*TAMANHO DA FONTE*/
+    font-weight: normal;/**/
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*DEGRADE DE FUNDO*/
+    text-indent: 10px; /*ESPAÇAMENTO NO TEXTO*/
+
+}
+
+main p{
+
+    margin: 15px 0px 15px 0px; /*MARGEM SENTIDO RELOGIO 15 EM CIMA-0 ESQUERDA-15 BAIXO - 0 ESQUERDA*/
+                                /*ASSIM VC CRIA UMA MARGEM EM TODOS OS PARAGARAFOS*/
+    text-align: justify;
+    text-indent: 30px; /*AFASTANDO O TEXTO DE INICIO DOS ASSUSTOS NOS PARAGRAFOS*/
+    font-size: 1.1em; /*AUMENTAR O TAMANHO DA FONTE */
+    line-height: 2em; /*ESPAÇAMENTO ENTRE LINHAS*/
+}   
+
+main strong{
+
+    color: var(--cor4); /*strong = Negrito*/
+    font-weight: bold; /*FONTE EM NEGRITO*/
+    /*background-color: var(--cor1); /*COR DE FUNDO DO QUADRADO atraz DA FONTE*/
+    padding: 2px 6px; /*ESPAÇAMENTO NA PALAVRA 2 E 6 NA LATERAL*/
+}
+
+main a{
+
+    text-decoration: none; /*LINKS DAS PALAVRAS SEM SUBLINHADO*/
+    font-weight: bold; /*FONTE EM NEGRITO*/
+    color: var(--cor5); /*COR DA LETRA*/
+    background-color: var(--cor1); /*COR DE FUNDO DA PALAVRA LINCADA*/
+    padding: 2px 6px; /*ESPAÇAMENTO DO FUNDO DA LETRA*/
+}
+
+main a:hover{
+
+    text-decoration: underline; /*AO PASSAR O MOUSE SOBRE O TEXTO SUBLINHAR*/
+    color: var(--cor4); /*CLAREAR O TEXTO*/
+}
+
+main img{
+
+    width: 100%; /*IMAGEM com 100% de LARGURA*/
+}
+
+main img.pequena{
+    display: block; /*TRANSFORMOU A IMAGEM EM BLOCO PARA CENTRALIZAR*/
+    max-width: 350px; /*TAMANHO MAXIMO DA IMAGEM*/
+    /*width: 50%; /*ALTERAR TAMANHO ORIGINAL DA IMAGEM PARA 50%*/
+    margin: auto; /*CENTRALIZAÇÃO DA IMAGEM AUTOMATICO depois de configurar a imagem como BLOCO acima*/
+    
+
+
+}
+
+    div.video{
+
+        background-color: var(--cor5); /*OBSERVAÇÃO TODA CLASS AO SER CHAMADA NO STYLE SERA COM  "." por isso .Video */
+        /*margin-bottom: 30px; /*ESPAÇO ABAIXO DO VIDEO */
+        margin: 0px -20px 30px -20px; /*MARGEM SENTIDO RELOGIO - EM CIMA 0 DIREITA -20 EM BAIXO 0 ESQUERDA -20*/
+        padding: 20px; /*MARGIN ESQUERDA*/
+        padding-bottom: 58%;
+        position: relative;
+
+    }
+
+    div.video >iframe{
+
+        position: absolute;
+        top: 5%; /*ESPAÇAMENTO VIDEO*/
+        left: 5%;
+        width: 90%;
+        height: 90%; /*ESPAÇAMENTO VIDEO*/
+
+    }
+    
+    aside{
+
+        background-color: var(--cor1); /*Fundo verde Quer aprender mais...*/
+        padding: 10px; /*MARGEM */
+        border-radius: 10px; /*ARREDONDAMENTO DO QUADRO VERDE*/
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281); /*SOMBRA BOX*/
+    
+    }
+
+    aside >ul{
+
+        list-style-type: '\2714\00A0\00A0'; /*simbolo de marcaçao "\2714" o ESPAÇO é "00A0" */
+        list-style-position: inside; /*MUDAR posição dos PONTOS DA LISTA dentro BOX*/
+        columns: 2; /*DIVIDIR A LISTA EM  DUAS COLUNAS*/
+        box-shadow: 3px 3px 0px black; /*TRAÇO NA LISTA*/
+    }
+
+    aside h3{
+
+        background-color: var(--cor4); /*titulo do box verde*/
+        color: white; /*FONTE BRANCA "Quer aprender mais..."*/
+        padding: 10px; /*MARGEM DO BOX DO texto*/
+        margin: -10px -10px 0px -10px; /*MARGEM Topo-Direita-Baixa-Esquerda*/ 
+        border-radius: 10px 10PX 0px 0px; /*ARRENDONDAMENTO DO BOX TEXTO*/
+
+
+
+
+    }
+
+/*RODAPE*/
+footer{
+    background-color: var(--cor5);
+    color: white; /*COR LETRA BRANCO*/
+    text-align: center;
+    font-size: 0, 8em;
+    padding: 5px;
+}
+
+footer > p > a {
+color: white;
+font-weight: bold;
+text-decoration: none;
+}
+
+footer a:hover{
+
+    text-decoration: underline;
+    color: var(--cor1);
+
+}
+
